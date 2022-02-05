@@ -1,4 +1,7 @@
 <script>
+  import Carousel from './lib/Carousel.svelte'
+  import Content from './lib/Content.svelte'
+  import Header from './lib/Header.svelte'
 </script>
 
 <svelte:head>
@@ -15,24 +18,8 @@
   />
 </svelte:head>
 
-<main>
-  <!-- Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart -->
-</main>
+<div class="min-h-screen font-kumbh-sans">
+  <Header />
+  <Carousel />
+  <Content />
+</div>
