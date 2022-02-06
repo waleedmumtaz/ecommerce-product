@@ -21,7 +21,7 @@
 <div class="font-kumbh-sans flex min-h-screen flex-col">
   <Header />
   <div
-    class="md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20"
+    class="md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20 md:p-5"
   >
     <Carousel />
     <Content />

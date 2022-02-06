@@ -16,9 +16,9 @@
 </script>
 
 <header>
-  <div class="relative">
+  <div class="relative md:mx-auto md:max-w-6xl">
     <!-- Tablet and desktop nav -->
-    <nav class="hidden py-8 md:mx-auto md:block md:max-w-6xl md:border-b">
+    <nav class="hidden py-8 md:block md:border-b md:px-5">
       <div class="flex items-center">
         <div class="flex w-full items-center justify-between">
           <div class="flex items-center gap-14">
@@ -122,7 +122,7 @@
         transition:fade={{ duration: 150 }}
         class={`${
           cartIsOpen
-            ? 'absolute top-16 w-full p-2 md:top-24 md:right-10 md:max-w-sm'
+            ? 'absolute top-16 w-full p-2 md:top-24 md:right-0 md:max-w-sm'
             : 'hidden'
         }`}
       >
