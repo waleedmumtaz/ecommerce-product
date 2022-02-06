@@ -18,7 +18,7 @@
   />
 </svelte:head>
 
-<div class="min-h-screen font-kumbh-sans">
+<div class="font-kumbh-sans min-h-screen">
   <Header />
   <Carousel />
   <Content />
