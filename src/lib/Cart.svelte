@@ -5,7 +5,7 @@
 </script>
 
 <div>
-  <div class="flex min-h-[16rem] w-full flex-col rounded-md bg-white shadow-lg">
+  <div class="flex min-h-[16rem] w-full flex-col rounded-md bg-white shadow-xl">
     <p class="p-5 font-bold">Cart</p>
     <hr />
 
@@ -38,7 +38,7 @@
       </div>
       <div class="mt-8 px-5">
         <button
-          class="bg-cstm-primary-orange w-full rounded-md py-4 font-bold text-white"
+          class="bg-cstm-primary-orange mb-5 w-full rounded-md py-4 font-bold text-white"
           >Checkout</button
         >
       </div>

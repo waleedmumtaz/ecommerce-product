@@ -17,8 +17,68 @@
 
 <header>
   <div class="relative">
+    <!-- Tablet and desktop nav -->
+    <nav class="hidden py-8 md:mx-auto md:block md:max-w-6xl md:border-b">
+      <div class="flex items-center">
+        <div class="flex w-full items-center justify-between">
+          <div class="flex items-center gap-14">
+            <img src="/assets/logo.svg" alt="logo" />
+            <ul
+              class="text-cstm-neutral-dark-grayish-blue flex items-center gap-10"
+            >
+              <li class="hover:text-cstm-neutral-very-dark-blue relative">
+                <a
+                  href="/#"
+                  class="after:hover:bg-cstm-primary-orange after:hover:absolute after:hover:-bottom-12 after:hover:left-0 after:hover:h-1 after:hover:w-full"
+                  >Collections</a
+                >
+              </li>
+              <li class="hover:text-cstm-neutral-very-dark-blue relative">
+                <a
+                  href="/#"
+                  class="after:hover:bg-cstm-primary-orange after:hover:absolute after:hover:-bottom-12 after:hover:left-0 after:hover:h-1 after:hover:w-full"
+                  >Men</a
+                >
+              </li>
+              <li class="hover:text-cstm-neutral-very-dark-blue relative">
+                <a
+                  href="/#"
+                  class="after:hover:bg-cstm-primary-orange after:hover:absolute after:hover:-bottom-12 after:hover:left-0 after:hover:h-1 after:hover:w-full"
+                  >Women</a
+                >
+              </li>
+              <li class="hover:text-cstm-neutral-very-dark-blue relative">
+                <a
+                  href="/#"
+                  class="after:hover:bg-cstm-primary-orange after:hover:absolute after:hover:-bottom-12 after:hover:left-0 after:hover:h-1 after:hover:w-full"
+                  >About</a
+                >
+              </li>
+              <li class="hover:text-cstm-neutral-very-dark-blue relative">
+                <a
+                  href="/#"
+                  class="after:hover:bg-cstm-primary-orange after:hover:absolute after:hover:-bottom-12 after:hover:left-0 after:hover:h-1 after:hover:w-full"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex items-center gap-10">
+            <button on:click={toggleCart}>
+              <IconCart />
+            </button>
+            <img
+              src="/assets/image-avatar.png"
+              alt="avatar"
+              class="hover:outline-cstm-primary-orange w-14 cursor-pointer rounded-full hover:outline hover:outline-2"
+            />
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Mobile nav -->
-    <nav class="relative">
+    <nav class="relative md:hidden">
       {#if navIsOpen}
         <div
           transition:fly={{ x: -50, duration: 500 }}
@@ -59,8 +119,12 @@
     <!-- Cart -->
     {#if cartIsOpen}
       <div
-        transition:fade={{ duration: 250 }}
-        class={`${cartIsOpen ? 'absolute top-16 w-full p-2' : 'hidden'}`}
+        transition:fade={{ duration: 150 }}
+        class={`${
+          cartIsOpen
+            ? 'absolute top-16 w-full p-2 md:top-24 md:right-10 md:max-w-sm'
+            : 'hidden'
+        }`}
       >
         <Cart />
       </div>

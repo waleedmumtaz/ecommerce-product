@@ -18,8 +18,12 @@
   />
 </svelte:head>
 
-<div class="font-kumbh-sans min-h-screen">
+<div class="font-kumbh-sans flex min-h-screen flex-col">
   <Header />
-  <Carousel />
-  <Content />
+  <div
+    class="md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20"
+  >
+    <Carousel />
+    <Content />
+  </div>
 </div>
