@@ -1,14 +1,29 @@
 <script>
+  import { cart } from '../stores'
   import IconCart from './IconCart.svelte'
 
   let itemsCount = 0
 
   const incrementItemsCount = () => {
-    itemsCount++
+    return itemsCount++
   }
+
   const decrementItemsCount = () => {
     if (itemsCount > 0) {
-      itemsCount--
+      return itemsCount--
+    }
+  }
+
+  const addItemsToCart = () => {
+    if (itemsCount > 0) {
+      const item = {
+        id: Date.now(),
+        name: 'Fall Limited Edition Sneakers',
+        price: 125,
+        quantity: itemsCount,
+      }
+
+      $cart = [...$cart, item]
     }
   }
 </script>
@@ -62,6 +77,7 @@
         >
       </div>
       <button
+        on:click|preventDefault={addItemsToCart}
         class="bg-cstm-primary-orange flex w-full items-center justify-center gap-3 rounded-md py-3 font-bold text-white shadow-lg hover:opacity-75 md:flex-1 md:py-4"
         ><span><IconCart fillColor="white" /></span> Add to cart</button
       >

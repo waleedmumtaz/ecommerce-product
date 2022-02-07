@@ -1,5 +1,6 @@
 <script>
   import { fade, fly } from 'svelte/transition'
+  import { cart } from '../stores'
   import Cart from './Cart.svelte'
   import IconCart from './IconCart.svelte'
 
@@ -64,8 +65,15 @@
             </ul>
           </div>
           <div class="flex items-center gap-10">
-            <button on:click={toggleCart}>
+            <button on:click={toggleCart} class="relative">
               <IconCart />
+              <span
+                class={`${
+                  $cart.length > 0
+                    ? 'bg-cstm-primary-orange absolute -top-2 -right-3 rounded-full px-2 text-xs text-white'
+                    : 'hidden'
+                }`}>{$cart.length}</span
+              >
             </button>
             <img
               src="/assets/image-avatar.png"
@@ -108,8 +116,15 @@
           <img src="/assets/logo.svg" alt="logo" />
         </div>
         <div class="flex items-center gap-6">
-          <button on:click={toggleCart}>
+          <button on:click={toggleCart} class="relative">
             <IconCart />
+            <span
+              class={`${
+                $cart.length > 0
+                  ? 'bg-cstm-primary-orange absolute -top-2 -right-3 rounded-full px-2 text-xs text-white'
+                  : 'hidden'
+              }`}>{$cart.length}</span
+            >
           </button>
           <img src="/assets/image-avatar.png" alt="avatar" class="w-6" />
         </div>
