@@ -2,6 +2,17 @@
   import Carousel from './lib/Carousel.svelte'
   import Content from './lib/Content.svelte'
   import Header from './lib/Header.svelte'
+
+  let navIsOpen = false
+  let cartIsOpen = false
+
+  const setNavIsOpen = (event) => {
+    navIsOpen = event.detail
+  }
+
+  const setCartIsOpen = (event) => {
+    cartIsOpen = event.detail
+  }
 </script>
 
 <svelte:head>
@@ -18,10 +29,12 @@
   />
 </svelte:head>
 
-<div class="font-kumbh-sans flex min-h-screen flex-col">
-  <Header />
+<div>
+  <Header on:toggleNav={setNavIsOpen} on:toggleCart={setCartIsOpen} />
   <div
-    class="md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20 md:p-5"
+    class={`${
+      navIsOpen || cartIsOpen ? 'opacity-25' : ''
+    } md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20 md:p-5`}
   >
     <Carousel />
     <Content />

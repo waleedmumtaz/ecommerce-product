@@ -1,18 +1,23 @@
 <script>
-  import { fade, fly } from 'svelte/transition'
+  import { createEventDispatcher } from 'svelte'
+  import { fade,fly } from 'svelte/transition'
   import { cart } from '../stores'
   import Cart from './Cart.svelte'
   import IconCart from './IconCart.svelte'
+
+  const dispatch = createEventDispatcher()
 
   let navIsOpen = false
   let cartIsOpen = false
 
   const toggleNav = () => {
     navIsOpen = !navIsOpen
+    dispatch('toggleNav', navIsOpen)
   }
 
   const toggleCart = () => {
     cartIsOpen = !cartIsOpen
+    dispatch('toggleCart', cartIsOpen)
   }
 </script>
 
@@ -92,7 +97,7 @@
           transition:fly={{ x: -50, duration: 500 }}
           class={`${
             navIsOpen
-              ? 'absolute left-0 top-0 min-h-screen w-2/3 bg-white p-6'
+              ? 'absolute left-0 top-0 z-10 min-h-screen w-2/3 bg-white p-6'
               : 'hidden'
           }`}
         >
@@ -137,7 +142,7 @@
         transition:fade={{ duration: 150 }}
         class={`${
           cartIsOpen
-            ? 'absolute top-16 w-full p-2 md:top-24 md:right-0 md:max-w-sm'
+            ? 'absolute top-16 z-10 w-full p-2 md:top-24 md:right-0 md:max-w-sm'
             : 'hidden'
         }`}
       >
