@@ -30,7 +30,7 @@
   />
 </svelte:head>
 
-<div>
+<div class="font-kumbh-sans md:flex md:min-h-screen md:flex-col">
   <Header on:toggleNav={setNavIsOpen} on:toggleCart={setCartIsOpen} />
   <div
     class={`${
@@ -45,4 +45,15 @@
 
     <Content />
   </div>
+  <footer class="pb-1 pt-5 text-center text-sm font-bold">
+    Challenge by <a
+      href="https://www.frontendmentor.io?ref=challenge"
+      target="_blank"
+      class="text-cstm-primary-orange underline">Frontend Mentor</a
+    >. Coded by
+    <a
+      href="https://github.com/waleedmumtaz"
+      class="text-cstm-primary-orange underline">Waleed Mumtaz</a
+    >.
+  </footer>
 </div>
