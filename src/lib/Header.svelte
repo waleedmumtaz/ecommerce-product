@@ -70,7 +70,7 @@
             </ul>
           </div>
           <div class="flex items-center gap-10">
-            <button on:click={toggleCart} class="relative">
+            <button on:click={toggleCart} class="relative" aria-label="cart">
               <IconCart />
               <span
                 class={`${
@@ -121,7 +121,7 @@
           <img src="/assets/logo.svg" alt="logo" />
         </div>
         <div class="flex items-center gap-6">
-          <button on:click={toggleCart} class="relative">
+          <button on:click={toggleCart} class="relative" aria-label="cart">
             <IconCart />
             <span
               class={`${

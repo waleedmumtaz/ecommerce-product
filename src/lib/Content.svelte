@@ -35,9 +35,9 @@
     >
       Sneaker Company
     </p>
-    <p class="py-3 text-2xl font-bold md:text-5xl">
+    <h1 class="py-3 text-2xl font-bold md:text-5xl">
       Fall Limited Edition Sneakers
-    </p>
+    </h1>
     <p class="text-cstm-neutral-dark-grayish-blue">
       These low-profile sneakers are your perfect casual wear companion.
       Featuring a durable rubber outer sole, they’ll withstand everything the
