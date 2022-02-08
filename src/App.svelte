@@ -1,7 +1,8 @@
 <script>
-  import Carousel from './lib/Carousel.svelte'
+  import SwiperCarousel from './lib/SwiperCarousel.svelte'
   import Content from './lib/Content.svelte'
   import Header from './lib/Header.svelte'
+  
 
   let navIsOpen = false
   let cartIsOpen = false
@@ -30,13 +31,14 @@
 </svelte:head>
 
 <div>
+  
   <Header on:toggleNav={setNavIsOpen} on:toggleCart={setCartIsOpen} />
   <div
     class={`${
       navIsOpen || cartIsOpen ? 'opacity-25' : ''
     } md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20 md:p-5`}
   >
-    <Carousel />
+    <SwiperCarousel />
     <Content />
   </div>
 </div>
