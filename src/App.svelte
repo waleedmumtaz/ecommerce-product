@@ -31,7 +31,7 @@
 
 <div class="font-kumbh-sans md:flex md:min-h-screen md:flex-col">
   <Header on:toggleNav={setNavIsOpen} on:toggleCart={setCartIsOpen} />
-  <div
+  <main
     class={`${
       navIsOpen || cartIsOpen ? 'opacity-25' : ''
     } md:mx-auto md:grid md:max-w-6xl md:flex-1 md:grid-cols-2 md:items-center md:gap-20 md:p-5`}
@@ -43,7 +43,7 @@
     <ThumbsGallery />
 
     <Content />
-  </div>
+  </main>
   <footer class="pb-1 pt-5 text-center text-sm font-bold">
     Challenge by <a
       href="https://www.frontendmentor.io?ref=challenge"
