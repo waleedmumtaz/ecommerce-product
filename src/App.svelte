@@ -17,7 +17,6 @@
 </script>
 
 <svelte:head>
-  <title>E-commerce Product Page</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link
     rel="preconnect"
